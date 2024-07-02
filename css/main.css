@@ -1,0 +1,97 @@
+/* Define color */
+:root {
+    --grey: #dddddd;
+    --light-grey: #f5f5f5;
+    --blue: #6495ED;
+    --white:#ffffff;
+}
+
+body {
+    margin-top: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+fieldset {
+    border: 0.0625em solid var(--grey);
+    background-color: var(--light-grey);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+legend {
+    font-size: 2rem;
+    border: 0.0625em solid var(--grey);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background-color: var(--white);
+}
+
+#fullname, #email, #message {
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    border: solid 0.0625em var(--grey);
+    border-radius: 0.25em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#button-submit {
+    width: 100%;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    border-radius: 0.25em;
+}
+
+
+/* TABLET RESPONSIVE */
+@media only screen and (min-width: 25rem) {
+    fieldset {
+        display: grid;
+        grid-template-areas: 
+        "legend legend"
+        "fullname-label-input email-label-input"
+        "message-label-input message-label-input"
+        "button-submit button-submit";
+        gap: 1em;
+    }
+
+    legend {
+        grid-area: legend;
+    }
+
+    .fullname-label-input {
+        grid-area: fullname-label-input;
+    }
+
+    .email-label-input {
+        grid-area: email-label-input;
+    }
+
+    .message-label-input {
+        grid-area: message-label-input;
+    }
+
+    #button-submit {
+        grid-area: button-submit;
+        width: 8em;
+    }
+    
+}
+
+/* DESKTOP RESPONSIVE */
+@media only screen and (min-width: 40rem) {
+    fieldset {
+        max-width: 50rem;
+        margin: auto;
+    }
+}
+
+

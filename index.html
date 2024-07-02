@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <fieldset>
+        <!-- Title -->
+        <legend>Form Assignment</legend>
+
+        <!-- input: Full Name -->
+        <div class="fullname-label-input">
+          <label for="fullname">Full name</label><br />
+          <input type="text" id="fullname" name="fullname" />
+        </div>
+        <br />
+
+        <!-- Input: Email -->
+        <div class="email-label-input">
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            name="email"
+          />
+        </div>
+        <br />
+
+        <!-- Input: Text Area -->
+        <div class="message-label-input">
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <!-- Button: Submit button -->
+        <input
+          id="button-submit"
+          type="submit"
+          name="submit-data"
+          value="Submit"
+        />
+      </fieldset>
+    </form>
+    <script src="js/main.js"></script>
+  </body>
+</html>
